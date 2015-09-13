@@ -87,7 +87,7 @@
                                 </state>
                                 <connections>
                                     <action selector="SketchMyPicPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="HWh-GA-SYX"/>
-                                    <segue destination="NLA-kb-k9X" kind="show" id="sc7-hE-HBF"/>
+                                    <segue destination="Fug-ug-D0Q" kind="show" id="sc7-hE-HBF"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sketch'n'Color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x9L-2Z-ks6">
@@ -118,7 +118,7 @@
             </objects>
             <point key="canvasLocation" x="366" y="139"/>
         </scene>
-        <!--Photo View Controller-->
+        <!--Sketch My Pic-->
         <scene sceneID="axh-uP-PpB">
             <objects>
                 <viewController id="NLA-kb-k9X" customClass="PhotoViewController" sceneMemberID="viewController">
@@ -145,20 +145,45 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ys9-2i-3Px" secondAttribute="trailing" constant="20" id="6pI-1V-fJd"/>
                             <constraint firstAttribute="centerX" secondItem="Ys9-2i-3Px" secondAttribute="centerX" id="9Ya-GQ-2k9"/>
                             <constraint firstItem="Ys9-2i-3Px" firstAttribute="top" secondItem="OCn-g3-kne" secondAttribute="bottom" constant="50" id="GWa-7p-21s"/>
-                            <constraint firstItem="Ys9-2i-3Px" firstAttribute="leading" secondItem="rei-JQ-99b" secondAttribute="leadingMargin" constant="50" id="LXH-Vi-cKH"/>
                             <constraint firstAttribute="centerX" secondItem="WEV-F0-OUU" secondAttribute="centerX" id="NVm-gV-2oO"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Ys9-2i-3Px" secondAttribute="trailing" constant="50" id="PjA-ZV-fMc"/>
+                            <constraint firstItem="Ys9-2i-3Px" firstAttribute="leading" secondItem="rei-JQ-99b" secondAttribute="leadingMargin" constant="20" id="aVa-oW-c23"/>
                             <constraint firstAttribute="centerY" secondItem="Ys9-2i-3Px" secondAttribute="centerY" id="fCB-km-Zgi"/>
                             <constraint firstItem="3t9-C7-WZ9" firstAttribute="top" secondItem="WEV-F0-OUU" secondAttribute="bottom" constant="10" id="lFc-5O-sMl"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Sketch My Pic" id="G3I-bp-8yd">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="ynM-5g-IOg">
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="NLA-kb-k9X" id="As8-Vp-r78"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="Ys9-2i-3Px" id="4Aa-xm-hLS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Db2-zq-8Sf" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1695" y="139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vwP-fr-E7O">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fug-ug-D0Q" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="prM-67-nYn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="NLA-kb-k9X" kind="relationship" relationship="rootViewController" id="n9o-ci-MMv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r2o-Vt-ZCR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1069" y="139"/>
         </scene>
